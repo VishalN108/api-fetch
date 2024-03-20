@@ -11,38 +11,72 @@
         padding: 0;
         box-sizing: border-box;
       }
-
-      body > .container{
-        margin-left: auto;
-        align-items: center;
+      #box{
+        margin-left: 500px;
       }
-
-      .row > #box {
+      .row> .items,#box{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
       }
-      .container {
-        min-width: 1140px;
-        margin: auto;
+
+      body{
+        background-color: black;
       }
-      #box > p {
-        width: 200px;
-        height: 200px;
-        line-height: 200px;
-        border: 2px solid #800080;
-        text-align: center;
-        margin: 20px;
+
+      #box > .items{
+    width: 350px;
+    height: 350px;
+    line-height: 350px;
+    align-items: center;
+    border: 2px solid #d6d0d6;
+    margin: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 8px 8px rgb(210, 207, 211);
+}
+
+.items:hover h1{
+
+color: #ffffff;
+}
+
+.items:hover img{
+transform: scale(1.05);
+}
+.items{
+  position: relative;
+  transition: all 0.5s;
+}
+.items h1{
+  width: 350px;
+  position: absolute;
+  font-size: 36px;
+  color: #E9E0DE;
+  top:150px;
+
+}
+      #box {
+        margin: 50px;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        margin-top: 5px;
         border-radius: 5px;
-        box-shadow: 10px 10px rgb(133, 60, 167);
       }
- 
+
+       
+      .items{
+        width: 500px;
+        height: 500px;
+        border: 2px solid black;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div id="box" row></div>
-      </div>
+    <div class="row">
+      <div id="box"></div>
     </div>
   </body>
   <script src="./index.js"></script>
